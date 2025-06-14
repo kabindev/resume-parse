@@ -1,0 +1,6 @@
+streamlit
+PyMuPDF
+requests
+pandas
+openpyxl
+python-dotenv
