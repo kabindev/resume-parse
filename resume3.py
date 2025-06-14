@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import streamlit as st
 import fitz  # PyMuPDF for PDF text extraction
 import os
@@ -1351,7 +1351,7 @@ if __name__ == "__main__":
         main()
     except Exception as e:
         st.error(f"Application error: {e}")
-=======
+
 import streamlit as st
 import fitz  # PyMuPDF for PDF text extraction
 import os
