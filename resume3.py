@@ -1352,33 +1352,6 @@ if __name__ == "__main__":
     except Exception as e:
         st.error(f"Application error: {e}")
 
-import streamlit as st
-import fitz  # PyMuPDF for PDF text extraction
-import os
-import json
-import requests
-import pandas as pd
-import re
-import logging
-from typing import Dict, List, Optional, Any
-from pathlib import Path
-import time
-from datetime import datetime
-import random
-import io
-from io import BytesIO
-import openpyxl
-from openpyxl import load_workbook
-import hashlib
-
-# Set page config
-st.set_page_config(
-    page_title="AI Resume Parser",
-    page_icon="📄",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
 # Custom CSS for better UI
 st.markdown("""
 <style>
