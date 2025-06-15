@@ -1,5 +1,13 @@
 
 import streamlit as st
+
+# Set page config
+st.set_page_config(
+    page_title="AI Resume Parser",
+    page_icon="📄",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 import fitz  # PyMuPDF for PDF text extraction
 import os
 import json
@@ -17,14 +25,6 @@ from io import BytesIO
 import openpyxl
 from openpyxl import load_workbook
 import hashlib
-
-# Set page config
-st.set_page_config(
-    page_title="AI Resume Parser",
-    page_icon="📄",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 # Custom CSS for better UI
 st.markdown("""
