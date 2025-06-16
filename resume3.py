@@ -973,7 +973,8 @@ def main():
         "🔑 Enter your API Key:",
         type="password",
         value=st.session_state.get("api_key", ""),
-        help="Enter your Gemini API key or OpenRouter API key (starting with sk-or-v1-)"
+        help="Enter your Gemini API key or OpenRouter API key (starting with sk-or-v1-)",
+        key="api_key_input"
     )
 
     if api_key:
