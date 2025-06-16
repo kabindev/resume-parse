@@ -993,7 +993,7 @@ def main():
         st.sidebar.info(f"Files processed this session: {len(st.session_state.processed_file_hashes)}")
 
         # Show recently processed files
-        if st.sidebar.button("🗂️ Show Processed Files"):
+        if st.sidebar.button("🗂️ Show Processed Files", key="show_processed_files_sidebar_button"):
             with st.sidebar.expander("Recently Processed Files", expanded=True):
                 for filename in list(st.session_state.processed_file_hashes.keys())[-5:]:
                     st.write(f"• {filename}")
@@ -1028,7 +1028,7 @@ def main():
         st.sidebar.caption(f"Resets: {reset_display}")
 
     # Clear session button
-    if st.sidebar.button("🗑️ Clear Session Data", help="Clear all processed file tracking"):
+    if st.sidebar.button("🗑️ Clear Session Data", help="Clear all processed file tracking", key="clear_session_data_sidebar_button"):
         st.session_state.processed_file_hashes = {}
         st.session_state.resume_database = []
         st.session_state.processing_complete = False
@@ -1078,7 +1078,7 @@ def main():
 
         # Processing section
         if new_files and api_key:
-            if st.button(f"🚀 Process {len(new_files)} New Resume(s)", type="primary"):
+            if st.button(f"🚀 Process {len(new_files)} New Resume(s)", type="primary", key="process_new_resumes_button"):
                 process_resumes(new_files, api_key, existing_excel_file, excel_mode)
         elif not new_files:
             st.info("🔄 All uploaded files have already been processed. Upload new files to continue.")
@@ -1291,7 +1291,7 @@ def display_results():
             st.metric("🆕 Last Batch Processed", last_batch)
 
         # Display all session data
-        if st.button("📊 View All Session Data"):
+        if st.button("📊 View All Session Data", key="view_all_session_data_button"):
             df = pd.DataFrame(st.session_state.resume_database) # resume_database stores dicts with final JSON keys
 
             # Convert Skills list to comma-separated string for display table
