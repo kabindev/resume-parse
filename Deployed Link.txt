@@ -1,0 +1,31 @@
+ Deployed Link:
+👉 https://resume-parse-k5bekgnbeww8rb2lkmnc4b.streamlit.app/
+
+The application supports parsing PDF resumes using either Google Gemini API or OpenRouter API for extraction, and includes intelligent file tracking, duplicate handling, and flexible Excel export options.
+
+User Manual – How to Generate API Keys
+For Google Gemini API Key:
+Go to the Google AI Studio.
+
+Log in with your Google account.
+
+Click on "Get API Key" from the left-hand menu.
+
+Enable the Gemini API (if prompted).
+
+Copy the generated key and paste it in the app under “🔑 Enter your API Key”.
+
+ Use this key if it doesn't start with sk-or-v1-.
+
+For OpenRouter API Key:
+Visit https://openrouter.ai.
+
+Sign in using GitHub, Google, or email.
+
+Navigate to your profile → API Keys → Click "Create Key".
+
+Copy the generated key (it will start with sk-or-v1-).
+
+Paste this into the app where prompted.
+
+Keep this key confidential. The app will auto-detect whether you're using a Gemini key or an OpenRouter key.
